@@ -249,8 +249,8 @@ async function start() {
            var transporter = nodemailer.createTransport({
              service: 'gmail',
              auth: {
-               user: 'deanbraun12345678@gmail.com',
-               pass: 'nnX7jdys'
+               user: 'yourEmail',
+               pass: 'yourPassword'
              },
              tls: { rejectUnauthorized: false }
            });
@@ -278,7 +278,7 @@ async function start() {
                   //  create json web token expires in 1 hour
                    jwt.sign({ user: newUser._id, exp: Math.floor(Date.now() / 1000) + (60 * 60) }, process.env.EMAIL_SECRET, function (err, token) {
                      const mailOptions = {
-                       from: 'deanbraun12345678@gmail.com',
+                       from: 'yourEmail',
                        to: newUser.email,
                        subject: 'Confirm Email',
                        text: 'Please click the link to register your account with SmartIce4u! \n' + 'http://localhost:3001/validateEmail/' + token
