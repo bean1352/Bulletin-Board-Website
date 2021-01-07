@@ -385,16 +385,16 @@ async function start() {
           var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
-              user: 'deanbraun12345678@gmail.com',
-              pass: 'nnX7jdys'
+              user: 'yourEmail',
+              pass: 'yourPassword'
             },
             tls: { rejectUnauthorized: false }
           });
 
 
           const mailOptions = {
-            from: 'deanbraun12345678@gmail.com',
-            to: 'braundean11@gmail.com',
+            from: 'xxxx',
+            to: 'xxxx',
             subject: Subject,
             text: Invoice + '\n\nSent from ' + Name + '\n\n'+ Email
           };
