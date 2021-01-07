@@ -1,0 +1,188 @@
+
+<%- include ('./partials/header.ejs') %>
+
+<div class="w3-content w3-padding" style="max-width:1564px; margin-top: 100px;";>
+
+
+<div style="box-shadow: 0px 0px 20px rgba(0,0,0,0.5); background-color:rgba(89, 194, 207,0.3);border-radius: 20px; padding: 10%; padding-top: 0; border: solid;border-color: white;">
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32 w3-padding-64-top w3-center" id="projects">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16"><b>Products</b></h2>
+  </div>
+  
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding buttonall" style="background-color: #00ced4!important;border:solid">Water</div>
+        <img src="/images/NVWO0919.jpg" alt="House" style="width:100% ;height:400px;object-fit: cover;border-radius: 10%;border: solid white !important">
+        <p>
+          350ml- R6.00
+        </p>
+        <p>500ml- R6.50</p>
+       </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding buttonall" style="background-color: #00ced4!important;border:solid">Fruit Juice</div>
+        <img src="/images/OVJT6530.jpg" alt="House" style="width:100% ;height:400px;object-fit: cover;border-radius: 10%;border: solid white !important">
+        <p>350ml- R10.00</p>
+        <p>500ml- R15.00</p>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding buttonall" style="background-color: #00ced4!important;border:solid">Icy's</div>
+        <img src="/images/BBVT4022.jpg" alt="House" style="width:100%; height:400px; object-fit: cover;border-radius: 10%;border: solid white !important">
+        <p>COVID Vitamin Booster</p>
+        <p>500ml – R18.00</p>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding buttonall" style="background-color: #00ced4!important;border:solid">Ice</div>
+        <img src="/images/ice.jpg" alt="House" style="width:100% ;height:400px;object-fit: cover;border-radius: 10%;border: solid white !important">
+        <p>2kg Ice bags- R10.00</p>
+        <p>2kg Smart Ice Sachets – R15.00</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32 w3-padding-64-top" id="about">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center"><b>About</b></h2>
+      <p style="border: solid; padding:10px; border-radius: 5px;font-size: 25px;">Smart Ice 4 U was founded in November of 2019 admits South Africa’s declining economy. Life partners and entrepreneurs, Jacques and Corline Eksteen, saw the need for personalized products in a depersonalised society. Their passion for Smart ice has elevated the business to include products like water/juice that is customizable to fit and satisfy any customers personalized needs. Smart ice 4 you based the core of their business on Philippians 4:13 – “I can do all things through Christ who strengthens me”.</p>
+  </div>
+
+  <div class="w3-row-padding w3-grayscale" style="display: flex; justify-content: space-around;">
+    <div class="w3-col l3 m6 w3-margin-bottom contact">
+      <img src="/images/jacques.jpg" alt="John" style="width:100%;height:300px; width:300px; object-fit: cover; border-radius: 50%;border: solid white !important">
+      <h3>Jacques Eksteen</h3>
+      <p>Being an entrepreneur for most of his life, he founded a partner who would assist him in creating his vision.</p>
+      <button class="buttonall btn-modal">Contact Jacques</button>
+
+      <div class="overlay" ></div>
+      <div class="modal" >
+        <button class="modal-close-btn close-btn"><i class="fa fa-times" title="Contact"></i></button>
+        <p><b>Jacques</b></p>
+        <p>072 922 1502</p>
+        <p>info@smartice4u.co.za</p>
+      </div>
+      
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom contact">
+      <img src="/images/corline.jpg" alt="Jane" style="width:100%;height:300px; width:300px;object-fit: cover; border-radius: 50%;border: solid white !important">
+      <h3>Corline Eksteen</h3>
+      <p >After 25 years of experience in the banking industry, she took the leap of faith and invested in her dream and vision of owning her own business.</p>
+      <!-- <p>071 674 5738</p> -->
+      <button class="buttonall btn-modal">Contact Corline</button>
+
+      <div class="overlay" ></div>
+      <div class="modal" >
+        <button class="modal-close-btn close-btn"><i class="fa fa-times" title="Contact"></i></button>
+        <p><b>Corline</b></p>
+        <p>071 674 5738</p>
+        <p>info@smartice4u.co.za</p>
+      </div>
+     
+    </div>
+  </div>
+ 
+  <div class="w3-container w3-padding-32 w3-padding-64-top" id="bulletinboard">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center"><b>Wall of Satisfaction</b></h2>
+
+
+    <div class="posts" style="color: white;text-shadow: 2px 2px 2px rgba(0,0,0,0.5); font-family: Georgia, 'Times New Roman', Times, serif;">
+      <% if(posts){ %>
+          <% for( let i = 0; i < posts.length; i++ ) { %>
+          <div class="post">
+              <div class="post-content">
+                  <input type="hidden" name="postID" value="<%= posts[i]._id %>" >
+                 
+                  <h4 class='post-content'><%= posts[i].content %> </h4> 
+                  <% if (posts[i].ownership || posts[i].canSave) { %>
+                     
+                      <button class="buttonall"><a class='remove-post'  href='/removePost'> Delete</a></button>
+                     <% } %>
+              
+              </div>
+              <h6 class="userDetail">~ <%= posts[i].email%> -  <%= posts[i].dateAdded %> </h6>
+              <hr>
+          </div>
+         
+          <% } %>
+      <% } %>
+  </div>
+
+
+
+
+<form class="login100-form validate-form" method="POST" action="/post" id='new-post' style="text-align: center;">
+
+            
+  <span class="login100-form-title p-b-34 p-t-27" style="text-align: center;">
+    <h3>Add a New Post</h3>
+            </span>
+            <div class="form-control">
+                <textarea name="content" id="content" cols="30" rows="2" style="width: 100%; resize: none;"></textarea>
+            </div>
+            <br>
+
+  <div class="container-login100-form-btn">
+    <button type='submit' class="buttonall" style="width: 100px;">
+      Post
+    </button>
+  </div>
+</form>
+ 
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16 w3-center"><b>Request Quote</b></h2>
+    <p>Lets get in touch and talk about what products you want.</p>
+    <form action="/sendinvoice" method="POST" class="w3-center">
+      <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section w3-border" type="email" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section w3-border" type="text" placeholder="Subject" required name="Subject">
+      <textarea class="w3-input w3-section w3-border" name="Invoice" id="" cols="30" rows="6" placeholder="Request a Quote" style="resize: none;"></textarea>
+      
+      <button class="buttonall" type="submit">
+         Send Message
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+
+<!--Waves Container-->
+<div>
+  <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+  <defs>
+  <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+  </defs>
+  <g class="parallax">
+  <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+  <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+  <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+  <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+  </g>
+  </svg>
+  </div>
+  <!--Waves end-->
+
+<!-- Footer -->
+<footer class="w3-center w3-white w3-padding-16">
+  <p style="color: white;">Powered by <a href="" title="" class="w3-hover-text-green">Varsity College</a></p>
+</footer>
+<script src="/main.js"></script>
+</body>
+</html>
